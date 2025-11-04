@@ -18,4 +18,5 @@ spec:
   body: '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
   bodyType: JSON
   endpoint: https://foo.com
+  group: test
   method: POST
