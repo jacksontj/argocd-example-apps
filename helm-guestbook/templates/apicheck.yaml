@@ -1,0 +1,21 @@
+apiVersion: k8s.checklyhq.com/v1alpha1
+kind: ApiCheck
+metadata:
+  annotations:
+  finalizers:
+  - k8s.checklyhq.com/finalizer
+  generation: 2
+  name: rpc-test
+spec:
+  assertions:
+  - comparison: EQUALS
+    property: $.result
+    source: JSON_BODY
+    target: "false"
+  - comparison: NOT_NULL
+    property: $.result
+    source: JSON_BODY
+  body: '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
+  bodyType: JSON
+  endpoint: https://foo.com
+  method: POST
