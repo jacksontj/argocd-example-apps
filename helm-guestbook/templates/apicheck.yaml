@@ -4,7 +4,6 @@ metadata:
   annotations:
   finalizers:
   - k8s.checklyhq.com/finalizer
-  generation: 2
   name: rpc-test
 spec:
   assertions:
