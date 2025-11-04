@@ -17,9 +17,4 @@ kind: Backend
 metadata:
   name: example-backend
 spec:
-  kind: Service
-  service:
-    name: my-service
-    namespace: guestbook
-    port: 80
-
+  type: Endpoints
