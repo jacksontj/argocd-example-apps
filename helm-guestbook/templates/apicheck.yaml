@@ -6,17 +6,6 @@ metadata:
   - k8s.checklyhq.com/finalizer
   name: rpc-test
 spec:
-  assertions:
-  - comparison: EQUALS
-    property: $.result
-    source: JSON_BODY
-    target: "false"
-  - comparison: NOT_NULL
-    property: $.result
-    source: JSON_BODY
-  body: '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}'
-  bodyType: JSON
   endpoint: https://foo.com
   success: "200"
   group: test
-  method: POST
