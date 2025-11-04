@@ -11,3 +11,15 @@ spec:
       allowedRoutes:
         namespaces:
           from: Same
+---
+apiVersion: backends.gateway.envoyproxy.io/v1alpha1
+kind: Backend
+metadata:
+  name: example-backend
+spec:
+  kind: Service
+  service:
+    name: my-service
+    namespace: default
+    port: 80
+
